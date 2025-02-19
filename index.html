@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Dhritilekha Deka</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="crossorigin"/>
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&amp;family=Roboto:wght@300;400;500;700&amp;display=swap"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&amp;family=Roboto:wght@300;400;500;700&amp;display=swap" media="print" onload="this.media='all'"/>
+    <noscript>
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&amp;family=Roboto:wght@300;400;500;700&amp;display=swap"/>
+    </noscript>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <style>
+      /* Core CSS */
+      body {
+        font-family: 'Roboto', sans-serif;
+        color: #343a40;
+        line-height: 1.5;
+        margin: 0;
+        padding: 0;
+      }
+      
+      .cover.bg-image {
+	  position: relative;
+	  min-height: 500px;
+	  background-repeat: no-repeat;
+	}
+
+	.mask {
+	  position: absolute;
+	  top: 0;
+	  left: 0;
+	  right: 0;
+	  bottom: 0;
+	}
+
+	.mask .text-center {
+	  position: relative;
+	  z-index: 2;
+	}
+
+      .bg-light {
+        background-color: #f8f9fa !important;
+      }
+
+      .bg-white {
+        background-color: #fff !important;
+      }
+
+      .bg-info {
+        background-color: #17a2b8 !important;
+      }
+
+      .text-white {
+        color: #fff !important;
+      }
+
+      .text-muted {
+        color: #6c757d !important;
+      }
+
+      .container {
+        width: 100%;
+        padding-right: 15px;
+        padding-left: 15px;
+        margin-right: auto;
+        margin-left: auto;
+        max-width: 1140px;
+      }
+
+      /* Navigation */
+      .site-nav {
+        padding: 1rem 0;
+      }
+
+      .nav {
+        display: flex;
+        flex-wrap: wrap;
+        padding-left: 0;
+        margin-bottom: 0;
+        list-style: none;
+        justify-content: center;
+      }
+
+      .nav-link {
+        padding: 0.5rem 1rem;
+        color: #343a40;
+        text-decoration: none;
+        transition: color 0.15s ease-in-out;
+      }
+
+      .nav-link:hover {
+        color: #17a2b8;
+      }
+
+      /* Header/Intro Section */
+      .cover {
+        position: relative;
+        padding: 4rem 0;
+        background-color: #17a2b8;
+      }
+
+      .mask {
+        padding: 2rem;
+      }
+
+      .avatar {
+        margin-bottom: 1rem;
+      }
+
+      .img-thumbnail {
+        border-radius: 50%;
+        max-width: 174px;
+        border: 5px solid rgba(255, 255, 255, 0.2);
+      }
+
+      /* Content Sections */
+      .shadow-1-strong {
+        box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+        border-radius: 0.25rem;
+        margin: 2rem 0;
+        padding: 2rem;
+      }
+
+      .h2 {
+        font-size: 2rem;
+        font-weight: 300;
+        margin-bottom: 1.5rem;
+      }
+
+      /* Timeline */
+      .timeline-card {
+        position: relative;
+        margin-bottom: 1.5rem;
+      }
+
+      .timeline-head {
+        background-color: #f8f9fa;
+        padding: 1rem;
+        border-radius: 0.25rem 0.25rem 0 0;
+      }
+
+      .timeline-body {
+        padding: 1rem;
+        border: 1px solid #dee2e6;
+        border-top: none;
+        border-radius: 0 0 0.25rem 0.25rem;
+      }
+
+      /* Skills Section */
+      .progress {
+        height: 20px;
+        background-color: #e9ecef;
+        border-radius: 0.25rem;
+        margin: 0.5rem 0;
+      }
+
+      .progress-bar {
+        background-color: #17a2b8;
+        color: #fff;
+        text-align: center;
+        line-height: 20px;
+      }
+
+      /* Footer */
+      footer {
+        padding: 2rem 0;
+        text-align: center;
+        color: #6c757d;
+      }
+
+      /* Utilities */
+      .text-center {
+        text-align: center !important;
+      }
+
+      .mb-4 {
+        margin-bottom: 1.5rem !important;
+      }
+
+      .row {
+        display: flex;
+        flex-wrap: wrap;
+        margin-right: -15px;
+        margin-left: -15px;
+      }
+
+      .col-md-6 {
+        position: relative;
+        width: 100%;
+        padding-right: 15px;
+        padding-left: 15px;
+      }
+
+      @media (min-width: 768px) {
+        .col-md-6 {
+          flex: 0 0 50%;
+          max-width: 50%;
+        }
+      }
+
+      /* Animations */
+      [data-aos] {
+        opacity: 0;
+        transition: all 0.5s;
+      }
+
+      [data-aos].aos-animate {
+        opacity: 1;
+      }
+
+      /* Print styles */
+      @media print {
+        .d-print-none {
+          display: none !important;
+        }
+      }
+    </style>
+  </head>
+  <body class="bg-light" id="top">
+    <header class="d-print-none">
+      <div class="container text-center text-lg-left">
+        <div class="pt-4 clearfix">
+          <h1 class="site-title mb-0">WELCOME TO MY HOMEPAGE</h1>
+          <div class="site-nav"> 
+            <nav role="navigation">
+              <ul class="nav justify-content-center">
+                <li class="nav-item"><a class="nav-link" href="#about" title="About"><span class="menu-title">About</span></a></li>
+                <li class="nav-item"><a class="nav-link" href="#education" title="Education"><span class="menu-title">Education</span></a></li>
+                <li class="nav-item"><a class="nav-link" href="#skills" title="Skills"><span class="menu-title">Skills</span></a></li>
+                <li class="nav-item"><a class="nav-link" href="#research" title="Research"><span class="menu-title">Research Interests</span></a></li>
+                <li class="nav-item"><a class="nav-link" href="#publications" title="Publications"><span class="menu-title">Publications</span></a></li>
+                <li class="nav-item"><a class="nav-link" href="#academic" title="Academic"><span class="menu-title">Academic Activities</span></a></li>
+                <li class="nav-item"><a class="nav-link" href="#contact" title="Contact"><span class="menu-title">Contact</span></a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </header>
+    
+    <div class="page-content">
+
+      <div class="container">
+
+<div class="resume-container">
+
+<div class="shadow-1-strong bg-white my-5" id="intro">
+    <div class="bg-info text-white">
+      <div class="cover bg-image" style="background-image: url('images/header-background1.JPG'); background-size: cover; background-position: center;">
+        <div class="mask" style="background-color: rgba(0, 0, 0, 0.4); backdrop-filter: blur(1.2px);">
+          <div class="text-center p-5">
+            <div class="avatar p-1">
+              <img class="img-thumbnail shadow-2-strong" src="images/avatar.jpg" width="174" height="174"/>
+            </div>
+            <div class="header-bio mt-3">
+              <div data-aos="zoom-in" data-aos-delay="0">
+                <h2 class="h1">Dhritilekha Deka</h2>
+                <p>Assistant Professor, Assam Engineering College, Guwahati</p>
+              </div>
+              <div class="header-social mb-3 d-print-none" data-aos="zoom-in" data-aos-delay="200">
+                <nav role="navigation">
+                  <ul class="nav justify-content-center">
+                    <li class="nav-item">
+                      <a class="nav-link text-white" href="mailto:dhrit174104139@iitg.ac.in" title="Email">
+                        <i class="fas fa-envelope text-white"></i>
+                        <span class="menu-title sr-only">Email</span>
+                      </a>
+                    </li>
+                  </ul>
+                </nav>
+              </div>
+              <div class="d-print-none">
+                <a class="btn btn-outline-light btn-lg shadow-sm mt-1 me-3 text-white" href="https://iitgoffice-my.sharepoint.com/:b:/g/personal/dhrit174104139_iitg_ac_in/EajHw2yEJ-NGhFSCGpr5jVsBhRMWNJyfNjpRvn3PC4ZkgQ?e=u9un2j" data-aos="fade-right" data-aos-delay="700">Curriculum Vitae</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+          <!-- About Section -->
+          <div class="shadow-1-strong bg-white my-5 p-5" id="about">
+            <div class="about-section">
+              <h2 class="h2 fw-light mb-4">About Me</h2>
+              <p align="justify">Self-motivated Ph.D. candidate, specialized in Geotechnical engineering along with a major interest in geo-environmental engineering. Intellectually curious and willing to learn. Excellent verbal and communication skills with a variety of audiences.</p>
+            </div>
+          </div>
+
+          <!-- Education Section -->
+          <div class="shadow-1-strong bg-white my-5 p-5" id="education">
+            <div class="education-section">
+              <h2 class="h2 fw-light mb-4">Education</h2>
+              <div class="timeline">
+                <div class="timeline-card" data-aos="fade-in" data-aos-delay="0">
+                  <div class="timeline-head px-4 pt-3">
+                    <div class="h5">Doctor of Philosophy in Civil Engineering</div>
+                  </div>
+                  <div class="timeline-body px-4 pb-4">
+                    <div class="text-muted text-small mb-3">2019-present | Indian Institute of Technology Guwahati</div>
+                    <div>
+                      <p>Thesis: Augmentation of qualitative groundwater recharge through phytoremediation assisted infiltration</p>
+                      <p>Supervisors: Dr. Ravi K, Dr. Archana M Nair</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="timeline-card" data-aos="fade-in" data-aos-delay="200">
+                  <div class="timeline-head px-4 pt-3">
+                    <div class="h5">Master of Engineering in Earth System Science and Engineering</div>
+                  </div>
+                  <div class="timeline-body px-4 pb-4">
+                    <div class="text-muted text-small mb-3">2017-2019 | Indian Institute of Technology Guwahati</div>
+                    <div>
+                      <p>CGPA: 8.13/10</p>
+                      <p>Thesis: Performance Evaluation of Terrestrial Photogrammetry for Generating High Resolution Digital Surface Model for Ground Surface</p>
+                      <p>Supervisor: Dr. Ajay Dashora</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="timeline-card" data-aos="fade-in" data-aos-delay="400">
+                  <div class="timeline-head px-4 pt-3">
+                    <div class="h5">Bachelor of Technology in Civil Engineering</div>
+                  </div>
+                  <div class="timeline-body px-4 pb-4">
+                    <div class="text-muted text-small mb-3">2012-2016 | Kalinga Institute of Technology, Bhubaneswar</div>
+                    <div>
+                      <p>CPI: 8.8/10</p>
+                      <p>Supervisor: Dr. P. C. Shah</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Skills Section -->
+          <div class="shadow-1-strong bg-white my-5 p-5" id="skills">
+            <div class="skills-section">
+              <h2 class="h2 fw-light mb-4">Skills</h2>
+              <div class="row">
+                <div class="col-md-6">
+                  <h3 class="h5">Laboratory and Field Instruments</h3>
+                  <ul class="list-unstyled">
+                    <li class="mb-2">Total Station</li>
+                    <li class="mb-2">Global Positioning System (GPS)</li>
+                    <li class="mb-2">Permeameters</li>
+                    <li class="mb-2">Infiltrometers</li>
+                    <li class="mb-2">Penetrometers</li>
+                    <li class="mb-2">Atomic Mass Spectrometer</li>
+                    <li class="mb-2">Resistivity meters</li>
+                    <li class="mb-2">pH meters</li>
+                  </ul>
+                </div>
+                <div class="col-md-6">
+                  <h3 class="h5">Software & Programming</h3>
+                  <ul class="list-unstyled">
+                    <li class="mb-2">Programming Languages: Python, MATLAB, R</li>
+                    <li class="mb-2">GIS Software: ArcGIS, QGIS</li>
+                    <li class="mb-2">Cloud Computing: Google Earth Engine</li>
+                    <li class="mb-2">Hydrological models: SWAT</li>
+                    <li class="mb-2">Other software: AutoCAD, STAAD Pro, Adobe Photoshop, LaTeX, MS Office, Origin</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Research Interests Section -->
+          <div class="shadow-1-strong bg-white my-5 p-5" id="research">
+            <div class="research-section">
+              <h2 class="h2 fw-light mb-4">Research Interests</h2>
+              <ul class="list-unstyled">
+                <li class="mb-2">Geo-environmental engineering</li>
+                <li class="mb-2">Groundwater and Soil Quality Monitoring</li>
+                <li class="mb-2">Remote Sensing and GIS</li>
+                <li class="mb-2">Hydrological Modeling</li>
+                <li class="mb-2">Tracer hydrology</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Academic Activities Section -->
+          <div class="shadow-1-strong bg-white my-5 p-5" id="academic">
+            <div class="academic-section">
+              <h2 class="h2 fw-light mb-4">Academic Activities</h2>
+              <div class="timeline">
+                <div class="timeline-card" data-aos="fade-in" data-aos-delay="0">
+                  <div class="timeline-body px-4 pb-4">
+                    <ul class="list-unstyled">
+                      <li class="mb-3">2022: Attended tutorials for GIAN course on 'Spatial Data Science in Disaster Management' under Ministry of Human Resources Development, Government of India</li>
+                      <li class="mb-3">2021: Attended tutorials and member of organizing committee in National Workshop on 'Cloud Computing and Hydro-Ecological Modelling for Himalayan Rivers', organized by IIT Guwahati</li>
+                      <li class="mb-3">2021: Poster Presentation at AGU Fall Meeting 2021</li>
+                      <li class="mb-3">2021: Attended a course on 'Using Google Earth Engine for Land Monitoring Applications' organized by NASA's ARSET</li>
+                      <li class="mb-3">2020: Attended a course on 'Programming Approaches in Remote Sensing' organized by IEEE Geoscience and Remote Sensing Society</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Publications Section -->
+          <div class="shadow-1-strong bg-white my-5 p-5" id="publications">
+            <div class="publications-section">
+              <h2 class="h2 fw-light mb-4">Publications</h2>
+              <div class="timeline">
+                <div class="timeline-card" data-aos="fade-in" data-aos-delay="0">
+                  <div class="timeline-head px-4 pt-3">
+                    <div class="h5">2025</div>
+                  </div>
+                  <div class="timeline-body px-4 pb-4">
+                    <a href="http://dx.doi.org/10.1016/j.uclim.2025.102299">Deka, D., Karangat, R., & Nair, A. M. (2025). Impact of urbanisation on groundwater vulnerability in shallow aquifer system of Assam: A DRASTIC approach. Urban Climate.</a>
+                  </div>
+                </div>
+
+                <div class="timeline-card" data-aos="fade-in" data-aos-delay="100">
+                  <div class="timeline-head px-4 pt-3">
+                    <div class="h5">2024</div>
+                  </div>
+                  <div class="timeline-body px-4 pb-4">
+                    <a href="http://dx.doi.org/10.1007/s11356-024-34734-4">Deka, D., Patwa, D., Nair, A. M., & Ravi, K. (2024). Influence of biochar amendment on removal of heavy metal from soils using phytoremediation by Catharanthus roseus L. and Chrysopogon zizanioides L. Environmental Science and Pollution Research.</a>
+                    <br/>
+                    <br/>
+                    <a href="http://dx.doi.org/10.1061/9780784485330.061">Deka, D., Ravi, K., & Nair, A. M. (2024). Comparative Investigation of Different Plant Species for Heavy Metal Removal through Phytoremediation. Geo-Congress 2024.</a>
+                  </div>
+                </div>
+
+                <div class="timeline-card" data-aos="fade-in" data-aos-delay="200">
+                  <div class="timeline-head px-4 pt-3">
+                    <div class="h5">2023</div>
+                  </div>
+                  <div class="timeline-body px-4 pb-4">
+                    <a href="http://dx.doi.org/10.1007/978-981-99-6395-9_11">Kumar, A., Pal, A. K., Ahmad, A., Deka, D., & Nair, A. M. (2023). Critical Zone Mapping for Hazard Susceptibility Analysis. Book Chapter.</a>
+                    <br/>
+                    <br/>
+                    <a href="http://dx.doi.org/10.5194/egusphere-egu23-11424">Nair, A. M., Deka, D., & Karangat, R. (2023). Assessment of land use land cover changes and its impact on groundwater resources of Kamrup along the banks of the River Brahmaputra. EGU 2023.</a>
+                  </div>
+                </div>
+
+                <div class="timeline-card" data-aos="fade-in" data-aos-delay="300">
+                  <div class="timeline-head px-4 pt-3">
+                    <div class="h5">2022</div>
+                  </div>
+                  <div class="timeline-body px-4 pb-4">
+                    <a href="http://dx.doi.org/10.1007/s12524-022-01580-1">Kumar, S., Devi, A. B., Deka, D., & Nair, A. M. (2022). A Climate Zone Perspective on Spatiotemporal Variations in GRACE Derived Groundwater Storage (GWS) in India. Journal of the Indian Society of Remote Sensing.</a>
+                    <br/>
+                    <br/>
+                    <a href="http://dx.doi.org/10.1007/s12517-022-09735-7">Devi, A. B., Deka, D., Aneesh, T. D., Srinivas, R., & Nair, A. M. (2022). Predictive modelling of land use land cover dynamics for a tropical coastal urban city in Kerala, India. Arabian Journal of Geosciences.</a>
+                    <br/>
+                    <br/>
+                    <a href="http://dx.doi.org/10.1007/978-981-16-5601-9_20">Choudhury, J., Gajamer, V., Deka, D., & Sekharan, S. (2022). Static and Dynamic Assessment of Tunnel Rock Supports in Weak Rock. Book Chapter.</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Awards Section -->
+          <div class="shadow-1-strong bg-white my-5 p-5" id="awards">
+            <div class="awards-section">
+              <h2 class="h2 fw-light mb-4">Awards</h2>
+              <ul class="list-unstyled">
+                <li class="mb-2">GATE Scholarship under Ministry of Human Resources Development (MHRD), Government of India from 2017 onwards.</li>
+                <li class="mb-2">Teaching Assistantship of NPTEL Higher Surveying course 2018-2019.</li>
+                <li class="mb-2">AGU Travel Grant owner for AGU Fall Meeting 2021, New Orleans.</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Contact Section -->
+          <div class="shadow-1-strong bg-white my-5 p-5" id="contact">
+            <div class="contact-section">
+              <h2 class="h2 fw-light mb-4">Contact</h2>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="mb-3">
+                    <strong>Follow me:</strong>
+                    <div class="text-muted"><a href="https://scholar.google.com/citations?user=oTflBREAAAAJ&hl=en">Google Scholar</a></div>
+                    <div class="text-muted"><a href="https://www.researchgate.net/profile/Dhritilekha-Deka">Researchgate</a></div>
+                    <div class="text-muted"><a href="https://www.linkedin.com/in/dhritilekhadeka/">LinkedIn</a></div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="mb-3">
+                    <strong>Address:</strong>
+                    <div class="text-muted">
+                      Department of Civil Engineering,<br>
+                      Assam Engineering College Guwahati,<br>
+                      Guwahati, Assam, India
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="pt-4 pb-4 text-muted text-center d-print-none">
+      <div class="container">
+        <div class="text-small">
+          <div class="mb-1">&copy; 2025. All rights reserved.</div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- JavaScript for animations -->
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        // Simple animation on scroll
+        const animatedElements = document.querySelectorAll('[data-aos]');
+        
+        const checkVisibility = () => {
+          animatedElements.forEach(element => {
+            const elementPosition = element.getBoundingClientRect();
+            const windowHeight = window.innerHeight;
+            
+            if (elementPosition.top < windowHeight * 0.8) {
+              element.classList.add('aos-animate');
+            }
+          });
+        };
+
+        window.addEventListener('scroll', checkVisibility);
+        checkVisibility(); // Initial check
+      });
+    </script>
+  </body>
+</html>
